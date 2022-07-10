@@ -1,0 +1,40 @@
+**This project was completed as a part of Khan Academy's Intro to SQL course. For this project I created a table for a bookstore that contained data on the book 
+titles, price, book format and page numbers. I then pulled applicable data from it to answer my questions raised.**
+
+CREATE TABLE bookstore (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, format TEXT, pages INTEGER);
+
+INSERT INTO 
+        bookstore VALUES (1, "Demon Slayer", 7, "print", 238);
+INSERT INTO 
+        bookstore VALUES (2, "Full Metal", 8, "ebook", 250);
+INSERT INTO 
+        bookstore VALUES (3, "Beserk", 15, "ebook", 105);
+INSERT INTO 
+        bookstore VALUES (4, "Avatar the Last Airbender", 10, "ebook", 190);
+INSERT INTO 
+        bookstore VALUES (5, "Game ON!", 7, "ebook", 220);
+INSERT INTO 
+        bookstore VALUES (6, "Diary of a Wimpy Kid", 12, "ebook", 300);
+INSERT INTO 
+        bookstore VALUES (7, "Misdirection", 5, "ebook", 189);
+INSERT INTO 
+        bookstore VALUES (8, "Ice Planet ", 9, "ebook", 330);
+INSERT INTO 
+        bookstore VALUES (9, "Taken", 10, "ebook", 201);
+INSERT INTO 
+        bookstore VALUES (10, "Squad", 15, "print", 150);
+        
+        #1 
+**Select all the information from the bookstore table, order the entries by book price.**
+SELECT * 
+FROM bookstore ORDER BY price DESC;
+
+#2 
+**Display the book with the most pages form the bookstore table.**
+SELECT MAX(pages)
+    FROM bookstore;
+
+#3
+**Calculate the avergae price of the books from the bookstore. **
+SELECT AVG(price)
+    FROM bookstore;
